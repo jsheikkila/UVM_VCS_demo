@@ -1,0 +1,17 @@
+This is UVM example design containing DUT (RAM) and UVM agent connected to it.
+Simple tests check that all write accesses work correctly by reading the address
+contents back and comparing data
+
+setenv VCS_HOME <point to your VCS installation>
+setenv PATH ${VCS_HOME}/bin:${PATH}
+setenv VERDI_HOME <point to your Verdi installation>
+setenv PATH ${VERDI_HOME}/bin:${PATH}
+setenv SNPSLMD_LICENSE_FILE <port@your flexlm license server name>
+
+Compilation:
+cd build
+./compile.sh
+Simulation (batch):
+./simv +UVM_TESTNAME=test1 
+Simulation using Verdi GUI:
+./simv +UVM_TESTNAME=test1 -gui

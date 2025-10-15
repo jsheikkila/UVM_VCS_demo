@@ -1,0 +1,3 @@
+WORK > default
+default: ./work
+TIME_RESOLUTION = 1ps

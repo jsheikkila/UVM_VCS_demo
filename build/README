@@ -9,6 +9,7 @@ setenv PATH ${VERDI_HOME}/bin:${PATH}
 setenv SNPSLMD_LICENSE_FILE <port@your flexlm license server name>
 
 Compilation:
+cd build
 ./compile.sh
 Simulation (batch):
 ./simv +UVM_TESTNAME=test1 

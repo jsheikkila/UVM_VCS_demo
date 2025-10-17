@@ -32,7 +32,11 @@ class test1 extends uvm_test;
     seq.start(env0.agent0.sequencer0);
     phase.drop_objection(this);
   endtask
-
+  
+  virtual function void end_of_elaboration_phase (uvm_phase phase) ;
+    uvm_top.print_topology();
+  endfunction
+  
   virtual task apply_reset();
     vif.reset <= 1;
     repeat(5) @ (posedge vif.clk);

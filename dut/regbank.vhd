@@ -29,8 +29,6 @@ begin
             if rw = '1' then
                 -- Write operation: Write data_in to the register at the specified address
                 registers(to_integer(unsigned(address))) <= data_in(15 downto 0);
-                --registers(to_integer(unsigned(address))) <= '1' & data_in(14 downto 0);
-
             else
                 -- Read operation: Output the data from the register at the specified address
                 data_out <= registers(to_integer(unsigned(address)));

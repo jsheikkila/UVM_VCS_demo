@@ -7,7 +7,6 @@ module tb_top;
 
   // Clock and reset signals
     logic clk;
-    logic reset;
 
     // Instantiate the interface
     reg_bank_if reg_if(clk, reset);
@@ -17,12 +16,6 @@ module tb_top;
         clk = 0;
         forever #5 clk = ~clk; // Generate a clock with a period of 10ns
     end
-
-    // Reset generation
-   // initial begin
-   //     reset = 1;
-   //     #20 reset = 0; // Deassert reset after 20ns
-   // end
 
     // Instantiate the VHDL register bank
     RegisterBank reg_bank_inst(

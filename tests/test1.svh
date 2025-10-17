@@ -17,10 +17,10 @@ class test1 extends uvm_test;
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     env0 = env::type_id::create("env0", this);
-    if (!uvm_config_db#(virtual reg_bank_if)::get(this, "", "switch_vif", vif))
+    if (!uvm_config_db#(virtual reg_bank_if)::get(this, "", "mem_vif", vif))
       `uvm_fatal("TEST", "Did not get vif")
 
-      uvm_config_db#(virtual reg_bank_if)::set(this, "env0.agent0.*", "switch_vif", vif);
+      uvm_config_db#(virtual reg_bank_if)::set(this, "env0.agent0.*", "mem_vif", vif);
   endfunction
 
   virtual task run_phase(uvm_phase phase);

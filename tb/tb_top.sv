@@ -28,8 +28,8 @@ module tb_top;
     );
 
     initial begin
-      uvm_config_db#(virtual reg_bank_if)::set(uvm_root::get(), "*", "reg_if", reg_if);
-      uvm_config_db#(virtual reg_bank_if)::set(uvm_root::get(), "*", "switch_vif", reg_if);
+//      uvm_config_db#(virtual reg_bank_if)::set(uvm_root::get(), "*", "reg_if", reg_if);
+      uvm_config_db#(virtual reg_bank_if)::set(uvm_root::get(), "*", "mem_vif", reg_if);
       run_test();
     end
 

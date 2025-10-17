@@ -18,7 +18,7 @@ class monitor extends uvm_monitor;
 
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    if (!uvm_config_db#(virtual reg_bank_if)::get(this, "", "switch_vif", vif))
+    if (!uvm_config_db#(virtual reg_bank_if)::get(this, "", "mem_vif", vif))
       `uvm_fatal("MON", "Could not get vif")
     mon_analysis_port = new ("mon_analysis_port", this);
   endfunction

@@ -12,7 +12,7 @@
 
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    if (!uvm_config_db#(virtual reg_bank_if)::get(this, "", "switch_vif", vif))
+    if (!uvm_config_db#(virtual reg_bank_if)::get(this, "", "mem_vif", vif))
       `uvm_fatal("DRV", "Could not get vif")
   endfunction
 
